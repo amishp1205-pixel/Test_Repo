@@ -98,10 +98,7 @@ git clone git@github.com:username/repo.git
          hotfix/…        release/1.2.0
                              │
  develop ──●─────●─────●─────●──────────────●───────────▶
-             \       \
-              \       feature/dashboard
-               \
-                feature/login
+
 ```
 
 ### 📋 Complete GitFlow Workflow Guide
@@ -109,12 +106,13 @@ git clone git@github.com:username/repo.git
 This demonstrates a **real-life GitFlow workflow** with clear steps, explanations, and commands.
 Can be applied using Claude code.
 
-#### 2.1: 🏗️ Setup `main` and `develop`
+#### 🏗️ Setup `main` and `develop`
 
 **Clone your repository:**
 ```bash
-git clone git@github.com:yourname/yourrepo.git
-cd yourrepo
+# Clone your repository and navigate into it
+git clone git@github.com:yourname/yourrepo.git   # Clones the repository using SSH
+cd yourrepo                                      # Changes directory to your new repo
 ```
 
 **Create the `develop` branch:**
@@ -123,43 +121,7 @@ git checkout -b develop
 git push -u origin develop
 ```
 
-#### 2.2: ✨ Start a New Feature
-
-**Always branch off from `develop`:**
-```bash
-git checkout develop
-git pull origin develop
-git checkout -b feature/login
-```
-
-**Do your coding work:**
-```bash
-git add .
-git commit -m "Add login page and backend auth"
-git push -u origin feature/login
-```
-
-#### 2.3: 🔀 Finish Feature and Merge into `develop`
-
-**Switch back to `develop`:**
-```bash
-git checkout develop
-git pull origin develop
-```
-
-**Merge the feature branch (preserving history):**
-```bash
-git merge --no-ff feature/login
-git push origin develop
-```
-
-**Clean up the old branch:**
-```bash
-git branch -d feature/login
-git push origin --delete feature/login
-```
-
-#### 2.4: 📦 Prepare a Release
+#### 📦 Prepare a Release
 
 **Create a release branch from `develop`:**
 ```bash
@@ -176,7 +138,7 @@ git commit -m "Fix login validation bug"
 git push
 ```
 
-#### 2.5: 🚢 Release to Production
+####  🚢 Release to Production
 
 **Merge the release branch into `main`:**
 ```bash
@@ -192,7 +154,7 @@ git tag -a v1.2.0 -m "Release version 1.2.0"
 git push origin v1.2.0
 ```
 
-#### 2.6: 🔄 Merge Release Back into `develop`
+#### 🔄 Merge Release Back into `develop`
 
 **Keep bug fixes in sync:**
 ```bash
