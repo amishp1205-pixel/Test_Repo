@@ -1,0 +1,247 @@
+/* Additional CSS for enhanced animations and effects */
+
+/* Pulse animation for logo */
+@keyframes pulse {
+  0% {
+    box-shadow: 
+      0 0 20px rgba(255, 255, 255, 0.5),
+      0 0 40px rgba(255, 105, 180, 0.7),
+      0 0 60px rgba(255, 20, 147, 0.5);
+  }
+  50% {
+    box-shadow: 
+      0 0 30px rgba(255, 255, 255, 0.8),
+      0 0 60px rgba(255, 105, 180, 1),
+      0 0 90px rgba(255, 20, 147, 0.8);
+  }
+  100% {
+    box-shadow: 
+      0 0 20px rgba(255, 255, 255, 0.5),
+      0 0 40px rgba(255, 105, 180, 0.7),
+      0 0 60px rgba(255, 20, 147, 0.5);
+  }
+}
+
+/* Glow animation for title */
+@keyframes glow {
+  0%, 100% {
+    text-shadow: 
+      0 0 10px rgba(255, 255, 255, 0.8),
+      0 0 20px rgba(255, 105, 180, 0.6),
+      0 0 30px rgba(255, 20, 147, 0.4);
+  }
+  50% {
+    text-shadow: 
+      0 0 20px rgba(255, 255, 255, 1),
+      0 0 30px rgba(255, 105, 180, 0.8),
+      0 0 40px rgba(255, 20, 147, 0.6);
+  }
+}
+
+/* Bounce animation for buttons */
+@keyframes bounce {
+  0%, 20%, 53%, 80%, 100% {
+    transform: translate3d(0,0,0);
+  }
+  40%, 43% {
+    transform: translate3d(0, -10px, 0);
+  }
+  70% {
+    transform: translate3d(0, -5px, 0);
+  }
+  90% {
+    transform: translate3d(0, -2px, 0);
+  }
+}
+
+/* Shimmer effect for input */
+@keyframes shimmer {
+  0% {
+    background-position: -200px 0;
+  }
+  100% {
+    background-position: calc(200px + 100%) 0;
+  }
+}
+
+/* Apply animations */
+.logo-pulse {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.title-glow {
+  animation: glow 3s ease-in-out infinite;
+}
+
+.button-bounce {
+  animation: bounce 1s ease infinite;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .title {
+    font-size: 2rem !important;
+  }
+  
+  .chat-container {
+    padding: 20px !important;
+    margin: 0 10px !important;
+  }
+  
+  .input-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .ask-button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    width: 150px !important;
+    height: 150px !important;
+  }
+  
+  .title {
+    font-size: 1.5rem !important;
+  }
+  
+  .subtitle {
+    font-size: 1rem !important;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #ff69b4, #ff1493);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, #ff1493, #ff69b4);
+}
+
+/* Selection styling */
+::selection {
+  background: rgba(255, 105, 180, 0.3);
+  color: #fff;
+}
+
+::-moz-selection {
+  background: rgba(255, 105, 180, 0.3);
+  color: #fff;
+}
+
+/* Chart container animations */
+.chart-container {
+  animation: chartGlow 3s ease-in-out infinite;
+}
+
+@keyframes chartGlow {
+  0%, 100% { 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+  50% { 
+    box-shadow: 
+      0 4px 15px rgba(0, 0, 0, 0.1),
+      0 0 20px rgba(255, 105, 180, 0.3);
+  }
+}
+
+/* Stats button pulse effect */
+.stats-button-pulse {
+  animation: statsPulse 2s ease-in-out infinite;
+}
+
+@keyframes statsPulse {
+  0%, 100% {
+    box-shadow: 0 4px 15px rgba(0, 191, 255, 0.4);
+  }
+  50% {
+    box-shadow: 
+      0 4px 15px rgba(0, 191, 255, 0.4),
+      0 0 25px rgba(0, 191, 255, 0.6);
+  }
+}
+
+/* Upload button pulse effect */
+.upload-button-pulse {
+  animation: uploadPulse 2s ease-in-out infinite;
+}
+
+@keyframes uploadPulse {
+  0%, 100% {
+    box-shadow: 0 4px 15px rgba(255, 140, 0, 0.4);
+  }
+  50% {
+    box-shadow: 
+      0 4px 15px rgba(255, 140, 0, 0.4),
+      0 0 25px rgba(255, 140, 0, 0.6);
+  }
+}
+
+/* Image analysis container animations */
+.image-analysis-glow {
+  animation: imageGlow 3s ease-in-out infinite;
+}
+
+@keyframes imageGlow {
+  0%, 100% { 
+    box-shadow: 
+      0 8px 32px rgba(0, 0, 0, 0.1),
+      inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  }
+  50% { 
+    box-shadow: 
+      0 8px 32px rgba(0, 0, 0, 0.1),
+      inset 0 1px 0 rgba(255, 255, 255, 0.2),
+      0 0 30px rgba(255, 140, 0, 0.4);
+  }
+}
+
+/* Audio upload button pulse effect */
+.audio-button-pulse {
+  animation: audioPulse 2s ease-in-out infinite;
+}
+
+@keyframes audioPulse {
+  0%, 100% {
+    box-shadow: 0 4px 15px rgba(50, 205, 50, 0.4);
+  }
+  50% {
+    box-shadow: 
+      0 4px 15px rgba(50, 205, 50, 0.4),
+      0 0 25px rgba(50, 205, 50, 0.6);
+  }
+}
+
+/* Audio analysis container animations */
+.audio-analysis-glow {
+  animation: audioGlow 3s ease-in-out infinite;
+}
+
+@keyframes audioGlow {
+  0%, 100% { 
+    box-shadow: 
+      0 8px 32px rgba(0, 0, 0, 0.1),
+      inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  }
+  50% { 
+    box-shadow: 
+      0 8px 32px rgba(0, 0, 0, 0.1),
+      inset 0 1px 0 rgba(255, 255, 255, 0.2),
+      0 0 30px rgba(50, 205, 50, 0.4);
+  }
+}
+
