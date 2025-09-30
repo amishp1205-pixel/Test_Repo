@@ -2,11 +2,9 @@
 
 A flashy, pink-themed FastAPI backend with React frontend that allows users to ask questions about cats using OpenAI's GPT-4o model. Features stunning visual effects, animations, and a modern UI.
 
-![KatGPT Logo](./KatGPT_logo.png)
-
 ## 📸 Screenshot
 
-![KatGPT Application Screenshot](./Screenshot%202025-09-30%20at%207.11.40%20PM.png)
+![KatGPT Application Screenshot](./screenshot.png)
 
 ## ✨ Features
 
