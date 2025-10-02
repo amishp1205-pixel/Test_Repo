@@ -461,7 +461,7 @@ function App() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.5, duration: 0.8 }}
       >
-        Ask Us anything about cats! I'm powered by AI 🚀
+        Please ask away about cats! I'm powered by AI 🚀
       </Subtitle>
 
       <ChatContainer
